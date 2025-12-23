@@ -120,7 +120,7 @@ Use this script for your project demo video:
 
 Below is a screenshot of the Task Management Dashboard:
 
-![Task Management Dashboard](public/screenshot.png)
+![Task Management Dashboard](https://raw.githubusercontent.com/Ketan-cmd/Task-Management-Dashboard/main/public/screenshot.png)
 
 ## 🔮 Future Improvements
 
