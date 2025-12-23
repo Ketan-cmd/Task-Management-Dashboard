@@ -118,7 +118,9 @@ Use this script for your project demo video:
 
 ## 📸 Screenshots
 
-(Add images here later if needed)
+Below is a screenshot of the Task Management Dashboard:
+
+![Task Management Dashboard](public/screenshot.png)
 
 ## 🔮 Future Improvements
 
