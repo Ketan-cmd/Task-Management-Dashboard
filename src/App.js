@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import AddTaskForm from "./components/AddTaskForm";
+import TaskList from "./components/TaskList";
+import FilterBar from "./components/FilterBar";
+import SearchBar from "./components/SearchBar";
+import ThemeToggle from "./components/ThemeToggle";
+import { useSelector } from "react-redux";
 
 function App() {
+  const theme = useSelector((state) => state.tasks.theme);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={theme === "dark" ? "dark" : ""}>
+      <div className="min-h-screen w-full bg-white dark:bg-gray-900 dark:text-white text-black transition-all duration-300 flex justify-center items-start">
+        <div className="max-w-xl w-full mt-10 p-4">
+          <h1 className="text-2xl font-bold mb-4 text-center">
+            Task Management Dashboard
+          </h1>
+
+          <ThemeToggle />
+          <AddTaskForm />
+          <SearchBar />
+          <FilterBar />
+          <TaskList />
+        </div>
+      </div>
     </div>
   );
 }

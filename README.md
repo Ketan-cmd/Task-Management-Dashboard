@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# Task Management Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive Task Management Dashboard built using React.js, Redux Toolkit, Tailwind CSS, and JSON Server. This project allows users to manage daily tasks efficiently with CRUD operations, backend persistence, filtering, searching, and theme switching.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### 🟢 Core Features
+- **Add new tasks**
+- **Edit tasks**
+- **Delete tasks**
+- **Mark tasks completed / pending**
+- **Filter All / Completed / Pending**
+- **Search tasks by title**
+- **Dark / Light Theme toggle**
 
-### `npm start`
+### 🔵 Backend Persistence
+- JSON Server mock API
+- Tasks are saved to backend file
+- Data persists after refresh
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🟣 UI Experience
+- Responsive design
+- Smooth theme switching
+- Modern Tailwind styling
+- Accessible UX/UI
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧠 Tech Stack
 
-### `npm test`
+| Tech              | Role                |
+|-------------------|---------------------|
+| React.js          | Frontend framework  |
+| Redux Toolkit     | State management    |
+| Tailwind CSS      | Styling             |
+| JSON Server       | Mock backend        |
+| JavaScript (ES6+) | Language            |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Installation & Setup
 
-### `npm run build`
+Follow these steps to run the project locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
+   ```bash
+   git clone <repo-url>
+   cd task-dashboard
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Start backend (JSON server)**
+   ```bash
+   npm run server
+   ```
+   Backend runs at:
+   👉 [http://localhost:5000/tasks](http://localhost:5000/tasks)
 
-### `npm run eject`
+4. **Start frontend**
+   ```bash
+   npm start
+   ```
+   Frontend runs at:
+   👉 [http://localhost:3000](http://localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📂 Folder Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+  components/
+    AddTaskForm.jsx
+    FilterBar.jsx
+    SearchBar.jsx
+    TaskItem.jsx
+    TaskList.jsx
+    ThemeToggle.jsx
+  redux/
+    store.js
+    tasksSlice.js
+  App.js
+  index.js
+  index.css
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🗂 API Routes
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Method | Endpoint       | Usage             |
+|--------|----------------|-------------------|
+| GET    | `/tasks`       | Fetch all tasks   |
+| POST   | `/tasks`       | Create new task   |
+| PUT    | `/tasks/:id`   | Update task       |
+| DELETE | `/tasks/:id`   | Remove task       |
 
-## Learn More
+## 🧪 Bonus Features ⭐
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+These are optional enhancements included:
+- Real backend simulation
+- Full CRUD async thunks
+- Loading states
+- Error handling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🎥 Loom Walkthrough Script
 
-### Code Splitting
+Use this script for your project demo video:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Home page overview
+2. Add task demo
+3. Edit & save task
+4. Delete task
+5. Toggle status
+6. Filter switching
+7. Search feature
+8. Dark / Light toggle
+9. Refresh → data persists
+10. Code explanation (Redux + backend)
 
-### Analyzing the Bundle Size
+**Total length:** 2–5 minutes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📸 Screenshots
 
-### Making a Progressive Web App
+(Add images here later if needed)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔮 Future Improvements
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Drag & drop tasks
+- User accounts
+- Categories
+- Due dates
+- Notifications
